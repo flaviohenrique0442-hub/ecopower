@@ -135,7 +135,7 @@ export default function CompanyCard() {
           display: flex;
           align-items: center;
           gap: 18px;
-          width: 100%;
+          width: 50%;
           background: white;
           border-radius: 22px;
           padding: 22px;
