@@ -1,17 +1,16 @@
 export default function CompanyCard() {
-  const whatsappNumber = "5598981547101";
+  const whatsappNumber = "5598999711247";
   const whatsappMessage = encodeURIComponent(
     "Olá! Vim através do card da EcoPower e gostaria de mais informações."
   );
 
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const instagramLink = "https://www.instagram.com/ecopowerenergiasaoluis/";
 
   return (
     <>
       <style>{`
-        * {
-          box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
           margin: 0;
@@ -30,18 +29,17 @@ export default function CompanyCard() {
 
         .card {
           width: 100%;
-          max-width: 560px;
+          max-width: 590px;
           position: relative;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.94);
+          background: rgba(255, 255, 255, 0.96);
           border: 1px solid rgba(69, 190, 59, 0.18);
           border-radius: 42px;
           box-shadow: 0 26px 70px rgba(36, 142, 46, 0.16);
-          padding: 46px 34px 38px;
+          padding: 38px 34px 34px;
         }
 
-        .curve-top,
-        .curve-bottom {
+        .curve-top, .curve-bottom {
           position: absolute;
           width: 310px;
           height: 310px;
@@ -50,19 +48,10 @@ export default function CompanyCard() {
           z-index: 0;
         }
 
-        .curve-top {
-          top: -170px;
-          left: -120px;
-        }
+        .curve-top { top: -170px; left: -120px; }
+        .curve-bottom { right: -125px; bottom: -160px; transform: rotate(180deg); }
 
-        .curve-bottom {
-          right: -125px;
-          bottom: -160px;
-          transform: rotate(180deg);
-        }
-
-        .dots-top,
-        .dots-bottom {
+        .dots-top, .dots-bottom {
           position: absolute;
           width: 95px;
           height: 95px;
@@ -71,15 +60,8 @@ export default function CompanyCard() {
           z-index: 0;
         }
 
-        .dots-top {
-          top: 28px;
-          right: 34px;
-        }
-
-        .dots-bottom {
-          bottom: 28px;
-          left: 28px;
-        }
+        .dots-top { top: 28px; right: 34px; }
+        .dots-bottom { bottom: 28px; left: 28px; }
 
         .content {
           position: relative;
@@ -88,17 +70,35 @@ export default function CompanyCard() {
         }
 
         .logo {
-          width: 250px;
+          width: 225px;
           max-width: 82%;
           display: block;
-          margin: 0 auto 24px;
+          margin: 0 auto 18px;
           filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
+        }
+
+        .facade-box {
+          width: 100%;
+          max-width: 470px;
+          margin: 0 auto 22px;
+          border-radius: 26px;
+          overflow: hidden;
+          border: 4px solid #ffffff;
+          box-shadow: 0 16px 34px rgba(36, 142, 46, 0.16);
+          background: #eefbe9;
+        }
+
+        .facade-box img {
+          width: 100%;
+          height: 205px;
+          display: block;
+          object-fit: cover;
         }
 
         .divider {
           width: 100%;
           height: 1px;
-          margin: 8px 0 28px;
+          margin: 8px 0 24px;
           background: linear-gradient(90deg, transparent, rgba(76, 195, 65, 0.45), transparent);
           position: relative;
         }
@@ -119,14 +119,14 @@ export default function CompanyCard() {
         .subtitle {
           font-size: 17px;
           line-height: 1.5;
-          margin: 0 auto 26px;
+          margin: 0 auto 24px;
           color: #2d3a3f;
         }
 
         .info-list {
           display: grid;
           gap: 14px;
-          margin: 0 auto 30px;
+          margin: 0 auto 26px;
           max-width: 455px;
         }
 
@@ -135,7 +135,7 @@ export default function CompanyCard() {
           align-items: center;
           gap: 18px;
           text-align: left;
-          background: rgba(255, 255, 255, 0.9);
+          background: rgba(255, 255, 255, 0.92);
           border: 1px solid rgba(0, 0, 0, 0.04);
           border-radius: 18px;
           padding: 16px 18px;
@@ -168,8 +168,7 @@ export default function CompanyCard() {
           font-weight: 700;
         }
 
-        .value,
-        .value-link {
+        .value, .value-link {
           margin: 0;
           color: #1f2933;
           font-size: 16px;
@@ -182,72 +181,51 @@ export default function CompanyCard() {
           text-decoration: underline;
         }
 
+        .buttons {
+          display: grid;
+          gap: 12px;
+          justify-content: center;
+        }
+
         .button {
           display: inline-flex;
           align-items: center;
           justify-content: center;
           gap: 12px;
-          min-width: 270px;
-          padding: 17px 26px;
+          min-width: 285px;
+          padding: 16px 26px;
           border-radius: 15px;
-          background: linear-gradient(135deg, #29af35, #58cf48);
           color: white;
           text-decoration: none;
           font-size: 18px;
           font-weight: 800;
-          box-shadow: 0 16px 28px rgba(47, 181, 54, 0.3);
           transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .button:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 22px 38px rgba(47, 181, 54, 0.38);
+        .button:hover { transform: translateY(-3px); }
+
+        .whatsapp {
+          background: linear-gradient(135deg, #29af35, #58cf48);
+          box-shadow: 0 16px 28px rgba(47, 181, 54, 0.3);
+        }
+
+        .instagram {
+          background: linear-gradient(135deg, #833ab4, #e1306c, #f77737);
+          box-shadow: 0 16px 28px rgba(225, 48, 108, 0.24);
         }
 
         @media (max-width: 520px) {
-          .page {
-            padding: 18px;
-          }
-
-          .card {
-            border-radius: 30px;
-            padding: 38px 20px 32px;
-          }
-
-          .logo {
-            width: 220px;
-          }
-
-          .subtitle {
-            font-size: 15px;
-          }
-
-          .info-card {
-            gap: 13px;
-            padding: 14px;
-          }
-
-          .icon {
-            min-width: 50px;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-          }
-
-          .label {
-            font-size: 18px;
-          }
-
-          .value,
-          .value-link {
-            font-size: 14px;
-          }
-
-          .button {
-            width: 100%;
-            min-width: unset;
-            font-size: 16px;
-          }
+          .page { padding: 18px; }
+          .card { border-radius: 30px; padding: 32px 20px 30px; }
+          .logo { width: 205px; }
+          .facade-box img { height: 175px; }
+          .subtitle { font-size: 15px; }
+          .info-card { gap: 13px; padding: 14px; }
+          .icon { min-width: 50px; width: 50px; height: 50px; font-size: 24px; }
+          .label { font-size: 18px; }
+          .value, .value-link { font-size: 14px; }
+          .button { width: 100%; min-width: unset; font-size: 16px; }
+          .buttons { width: 100%; }
         }
       `}</style>
 
@@ -261,10 +239,14 @@ export default function CompanyCard() {
           <div className="content">
             <img className="logo" src="/logo-ecopower.png" alt="EcoPower Energia Solar" />
 
+            <div className="facade-box">
+              <img src="/fachada-ecopower.jpg" alt="Fachada da EcoPower" />
+            </div>
+
             <div className="divider" />
 
             <p className="subtitle">
-              Especialistas em Energia Solar, Mobilidades e Soluções.
+              Especialistas em atendimento, qualidade e confiança.
             </p>
 
             <div className="info-list">
@@ -272,7 +254,7 @@ export default function CompanyCard() {
                 <div className="icon">📍</div>
                 <div>
                   <p className="label">Endereço</p>
-                  <p className="value">Av. Joaquim Mochel, 20 - Sala 01 e 02, São Luís, 65050-145, MA, BR</p>
+                  <p className="value">Av. Joaquim Mochel, COHAB ANIL 2 - São Luís/MA</p>
                 </div>
               </div>
 
@@ -285,19 +267,35 @@ export default function CompanyCard() {
               </div>
 
               <div className="info-card">
-                <div className="icon">🟢</div>
+                <div className="icon">💬</div>
                 <div>
                   <p className="label">WhatsApp</p>
                   <a className="value-link" href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    (98) 98154-7101
+                    (98) 99971-1247
+                  </a>
+                </div>
+              </div>
+
+              <div className="info-card">
+                <div className="icon">📸</div>
+                <div>
+                  <p className="label">Instagram</p>
+                  <a className="value-link" href={instagramLink} target="_blank" rel="noopener noreferrer">
+                    @ecopowerenergiasaoluis
                   </a>
                 </div>
               </div>
             </div>
 
-            <a className="button" href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              💬 Falar no WhatsApp
-            </a>
+            <div className="buttons">
+              <a className="button whatsapp" href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                💬 Falar no WhatsApp
+              </a>
+
+              <a className="button instagram" href={instagramLink} target="_blank" rel="noopener noreferrer">
+                📸 Ver Instagram
+              </a>
+            </div>
           </div>
         </section>
       </main>
