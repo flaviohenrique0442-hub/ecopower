@@ -131,10 +131,11 @@ export default function CompanyCard() {
           margin-bottom: 32px;
         }
 
-        .info-card {
+        .info-card div {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           gap: 18px;
+          width: 100%;
           background: white;
           border-radius: 22px;
           padding: 22px;
