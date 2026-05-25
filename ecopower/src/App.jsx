@@ -131,11 +131,10 @@ export default function CompanyCard() {
           margin-bottom: 32px;
         }
 
-        .info-card div {
+        .info-card {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           gap: 18px;
-          width: 100%;
           background: white;
           border-radius: 22px;
           padding: 22px;
@@ -154,6 +153,10 @@ export default function CompanyCard() {
           flex-shrink: 0;
         }
 
+        .info-content {
+          text-align: left;
+        }
+          
         .label {
           font-size: 16px;
           color: #2cab35;
@@ -276,61 +279,65 @@ export default function CompanyCard() {
             <div className="divider"></div>
 
             <div className="info-grid">
-              <div className="info-card">
-                <div className="icon">📍</div>
 
-                <div>
-                  <div className="label">Endereço</div>
+            <div className="info-card">
+              <div className="icon">📍</div>
 
-                  <div className="value">
-                    Av. Joaquim Mochel, 20 - Sala 01 e 02,
-                    São Luís, 65050-145, MA, BR
-                  </div>
+              <div className="info-content">
+                <div className="label">Endereço</div>
+
+                <div className="value">
+                  Av. Joaquim Mochel, 20 - Sala 01 e 02,
+                  São Luís, 65050-145, MA, BR
                 </div>
               </div>
+            </div>
 
-              <div className="info-card">
-                <div className="icon">🕒</div>
 
-                <div>
-                  <div className="label">Horário</div>
+            <div className="info-card">
+              <div className="icon">🕒</div>
 
-                  <div className="value">
-                    Segunda a Sexta • 08h às 18h
-                  </div>
+              <div className="info-content">
+                <div className="label">Horário</div>
+
+                <div className="value">
+                  Segunda a Sexta • 08h às 18h
                 </div>
               </div>
+            </div>
 
-              <div className="info-card">
-                <div className="icon">💬</div>
 
-                <div>
-                  <div className="label">WhatsApp</div>
+            <div className="info-card">
+              <div className="icon">💬</div>
 
-                  <a
-                    href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="value link"
-                  >
-                    (98) 98154-7101
-                  </a>
-                </div>
+              <div className="info-content">
+                <div className="label">WhatsApp</div>
+
+                <a
+                  className="value link"
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (98) 99971-1247
+                </a>
               </div>
+            </div>
 
-              <div className="info-card">
-                <div className="icon">📸</div>
 
-                <div>
-                  <div className="label">Instagram</div>
+            <div className="info-card">
+              <div className="icon">📸</div>
 
-                  <a
-                    href={instagramLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="value link"
-                  >
-                    @ecopowerenergiasaoluis
+              <div className="info-content">
+                <div className="label">Instagram</div>
+
+                <a
+                  className="value link"
+                  href="https://www.instagram.com/ecopowerenergiasaoluis/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @ecopowerenergiasaoluis
                   </a>
                 </div>
               </div>
