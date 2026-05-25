@@ -1,5 +1,5 @@
 export default function CompanyCard() {
-  const whatsappNumber = "5598999711247";
+  const whatsappNumber = "5598981547101";
   const whatsappMessage = encodeURIComponent(
     "Olá! Vim através do card da EcoPower e gostaria de mais informações."
   );
@@ -264,7 +264,7 @@ export default function CompanyCard() {
             <div className="divider" />
 
             <p className="subtitle">
-              Especialistas em atendimento, qualidade e confiança.
+              Especialistas em Energia Solar, Mobilidades e Soluções.
             </p>
 
             <div className="info-list">
@@ -272,7 +272,7 @@ export default function CompanyCard() {
                 <div className="icon">📍</div>
                 <div>
                   <p className="label">Endereço</p>
-                  <p className="value">Av. Joaquim Mochel, COHAB ANIL 2 - São Luís/MA</p>
+                  <p className="value">Av. Joaquim Mochel, 20 - Sala 01 e 02, São Luís, 65050-145, MA, BR</p>
                 </div>
               </div>
 
@@ -289,7 +289,7 @@ export default function CompanyCard() {
                 <div>
                   <p className="label">WhatsApp</p>
                   <a className="value-link" href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    (98) 99971-1247
+                    (98) 98154-7101
                   </a>
                 </div>
               </div>
